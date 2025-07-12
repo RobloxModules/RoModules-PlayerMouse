@@ -5,7 +5,7 @@
 **PlayerMouse** is a Roblox Module that re-implements the [Mouse instance](https://create.roblox.com/docs/reference/engine/classes/Mouse) but more customizable and provides more parameters for connected functions to work with.<br>
 The module can also easily integrate with existing code, thanks to a similar structure but more up-to-date with extra features like `mouse.TargetFilterArray` and `mouse.MousePos`
 
-**PlayerMouse** also includes more parameters for connected function, like for `mouse.WheelForward` and `mouse.WheelBackward` without interfering with any existing parameters
+**PlayerMouse** also includes more parameters for connected functions, like for `mouse.WheelForward` and `mouse.WheelBackward` without interfering with any existing parameters.
 
 Example Usage:
 ```luau

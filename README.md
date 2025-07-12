@@ -12,7 +12,7 @@ Example Usage:
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local PlayerMouse = require(game.ReplicatedStorage.PlayerMouse)
+local PlayerMouse = require(ReplicatedStorage.PlayerMouse)
 
 local player = Players.LocalPlayer
 local mouse = PlayerMouse.New(player)

@@ -70,7 +70,7 @@ function Mouse.New(player: Player, hitRange: number?)
 		end
 		
 		local rayParams = RaycastParams.new()
-		rayParams.FilterType = Enum.RaycastFilterType.Include
+		rayParams.FilterType = Enum.RaycastFilterType.Exclude
 		rayParams.FilterDescendantsInstances = self.TargetFilterArray or {}
 		
 		if self.TargetFilter then

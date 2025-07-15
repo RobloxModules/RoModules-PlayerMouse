@@ -15,7 +15,7 @@ local Players = game:GetService("Players")
 local PlayerMouse = require(ReplicatedStorage.PlayerMouse)
 
 local player = Players.LocalPlayer
-local mouse = PlayerMouse.New(player)
+local mouse = PlayerMouse.New()
 
 mouse.Button2Up:Connect(function()
 	print("Button2Up")

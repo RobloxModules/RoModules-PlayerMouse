@@ -6,14 +6,15 @@
 
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
 
 local Mouse = {}
 Mouse.__index = Mouse
 
-function Mouse.New(player: Player, hitRange: number?)
+function Mouse.New(hitRange: number?)
 	local self = setmetatable({}, Mouse)
 	self.Events = {}
-	self.Player = player
+	self.Player = Players.LocalPlayer
 	
 	self.HitRange = (typeof(hitRange) == "number") and hitRange or 4096
 	self.Hit = CFrame.new()
@@ -70,7 +71,7 @@ function Mouse.New(player: Player, hitRange: number?)
 		end
 		
 		local rayParams = RaycastParams.new()
-		rayParams.FilterType = Enum.RaycastFilterType.Exclude
+		rayParams.FilterType = Enum.RaycastFilterType.Include
 		rayParams.FilterDescendantsInstances = self.TargetFilterArray or {}
 		
 		if self.TargetFilter then

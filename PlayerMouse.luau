@@ -64,7 +64,7 @@ function Mouse.New(hitRange: number?)
 		
 		if not hasEventFired then
 			self.TimeIdle = os.clock() - self.__TimestampSinceLastNonIdle
-			self.__IdleBindable:Fire(self.__TimestampSinceLastNonIdle)
+			self.__IdleBindable:Fire(self.__TimeIdle, self.__TimestampSinceLastNonIdle)
 		else
 			self.__TimestampSinceLastNonIdle = os.clock()
 			self.TimeIdle = 0
